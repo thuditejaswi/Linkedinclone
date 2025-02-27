@@ -14,10 +14,10 @@
         }
         body{
             background-color: whitesmoke;
-        }
-nav{
+        } 
+        nav{
     width:100%;
-            height:100px;
+            height:70px;
             position: fixed;
             left:0;
             top:0;
@@ -25,10 +25,10 @@ nav{
             background-color: white;
 }
 .input-group{
-    width: 400px;
+    width: 300px;
 }
 .right i{
-    font-size: 20px;
+    font-size: 16px;
 }
 .section-1{
     width: 100vw;
@@ -46,9 +46,7 @@ width: 19vw;
 /* min-height: 100vh; */
 margin-left: 150px;
 margin-right: 30px;
-}
-
-.middleone{
+}.middleone{
 width: 45%;
 /* margin-left: 30px; */
 /* margin-right: 30px; */
@@ -153,71 +151,8 @@ border: 1px solid gray;
 }
 .snist{
     /* position: relative; */
-    width: 50px;
+    width: 30px;
     margin-left: 10px;
-    
-}
-
-@media(max-width:1100px){
-    .rightone{
-        display:none;
-    }
-    .leftone{
-        width:40vw
-    }
-    .middleone{
-
-        width: 90%;
-    }
-    .input-group{
-    width: 200px;
-    height: 55px;
-    display: none;
-}
-.right i{
-    font-size: 15px;
-}
-
-}
-@media(max-width:700px){
-    .main{
-        flex-direction: column;
-    }
-    .right i {
-        font-size: 14px;
-        margin-top: 12px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    .rightone{
-        display:none;
-    }
-    .left2, .left3{
-       display: none;
-    }
-    .left1{
-          width: 100vw ;
-          height: fit-content;
-          margin-bottom: 20px;
-          padding: 0;
-          margin: 0px;
-          display: none;
-
-          /* display: none; */
-        }
-    .middleone{
-
-        width: 90vw;
-        /* margin: 350px 0px; */
-    /* margin-left: 0px; */
-        
-    }
-    .navbar-nav .nav-link {
-                font-size: 10px;
-                display: none;
-    }
     
 }
 .back{
@@ -252,12 +187,74 @@ border: 1px solid gray;
             border-radius:25px;
             padding-left:10px;
 } 
+@media(max-width:1100px){
+    .rightone{
+        display:none;
+    }
+    .leftone{
+        width:50vw;
+margin-left: 0px;
+margin-right: 30px;
+    }
+    .middleone{
+
+        width: 90%;
+    }
+    .input-group{
+    width: 200px;
+    height: 55px;
+    display: none;
+}
+.right i{
+    font-size: 15px;
+}
+}
+@media(max-width:700px){
+    .section-1{
+        flex-direction: column;
+    }
+    .left1{
+          width: 90vw ;
+          height: fit-content;
+          margin-bottom: 20px;
+          padding: 0;
+          margin-left: 0px;
+        }
+    .middleone{
+
+        width: 90vw;
+        margin-right: 0px;
+    margin-left: 2px;
+        
+    }
+    .navbar-nav .nav-link {
+                font-size: 10px;
+                display: none;
+    }
+    
+    .right i {
+        font-size: 14px;
+        margin-top: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    .rightone{
+        display:none;
+    }
+    .left2, .left3{
+       display: none;
+    }
+}
     </style>
 </head>
 <body>
+<!-- navbar -->
+
     <nav class="d-flex justify-content-around align-items-center">
         <div class="left d-flex justify-content-center align-items-center">
-            <img src="logo.jpg" width="50px" class="mb-2" alt="">
+            <img src="logo.jpg" width="50px" class="mb-3 mx-2" alt="">
             <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
                 <input type="text" class="form-control" placeholder="Search " aria-label="Username" aria-describedby="basic-addon1">
@@ -269,14 +266,14 @@ border: 1px solid gray;
                 <i class="fa-solid fa-house"></i><p>Home</p>
             </div>
            <div  class="d-flex flex-column justify-content-center align-items-center px-2"> 
-            <i class="fa-solid fa-user-group"></i><p>Connections</p>
+            <i class="fa-solid fa-user-group"></i><p>Networks</p>
         </div>
             <div  class="d-flex flex-column justify-content-center align-items-center px-2">
                 <i class="fa-solid fa-briefcase"></i><p>Jobs</p>
             </div>
             
             <div  class="d-flex flex-column justify-content-center align-items-center px-2">
-                <i class="fa-solid fa-message"></i><p>Message</p>
+                <i class="fa-solid fa-message"></i><p>Messaging</p>
             </div>
             <div  class="d-flex flex-column justify-content-center align-items-center border-end border-gray border-2 px-2">
                 <i class="fa-solid fa-bell"></i><p>Notifications</p>
@@ -291,7 +288,7 @@ border: 1px solid gray;
     </nav>
     
 <!-- section1 -->
- <div class="cont1 section-1 d-flex ">
+<div class="cont1 section-1 d-flex ">
     <div class="leftone">
         <div class="left1">
             <img src="back.png" class="back" alt="">
@@ -301,7 +298,7 @@ border: 1px solid gray;
             <h3 class="abt">Hyderabad, Telangana</h3>
             <div class="d-flex">
                 <img src="sreenidhi.jpg" class="snist" alt="">
-            <b>Sreenidhi Institute Of Science And Technology</b>
+            <b class="fs-9">Sreenidhi Institute Of Science And Technology</b>
             </div>
             
         </div>
@@ -394,7 +391,7 @@ border: 1px solid gray;
                 <p class="m31"> <i class="fa-solid fa-repeat p-1 py-2"></i>Repost</p>
                 <p class="m31"> <i class="fa-solid fa-paper-plane p-1 py-2"></i>send</p>
             </div>
-          </div>
+          </div>
 
 
 <div class="middle3 p2 mt-3">
@@ -428,7 +425,7 @@ border: 1px solid gray;
         <p class="m31"> <i class="fa-solid fa-repeat p-1 py-2"></i>Repost</p>
         <p class="m31"> <i class="fa-solid fa-paper-plane p-1 py-2"></i>send</p>
     </div>
-          </div>
+          </div>
 
 <div class="middle2 p3 mt-3">
     <div class=" d-flex p-2 justify-content-between">
@@ -461,7 +458,7 @@ border: 1px solid gray;
         <p class="m31"> <i class="fa-solid fa-repeat p-1 py-2"></i>Repost</p>
         <p class="m31"> <i class="fa-solid fa-paper-plane p-1 py-2"></i>send</p>
     </div>
-          </div>
+          </div>
         
     </div>
     <div class="rightone">
@@ -565,7 +562,6 @@ border: 1px solid gray;
             
 
     </div>
-
 
 
 
