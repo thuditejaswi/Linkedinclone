@@ -3,578 +3,1106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Linkedin</title>
+    <title>Tejaswi's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-        *{
+        :root {
+            --primary: #000000;
+            --secondary: #030c1e;
+            --accent: #252525;
+            --light: #f5f5f5;
+            --dark: #36364e;
+            --transition: all 0.3s ease-in-out;
+        }
+        
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
-        body{
-            background-color: whitesmoke;
-        }
-nav{
-    width:100%;
-            height:80px;
-            position: fixed;
-            left:0;
-            top:0;
-            z-index:2;
-            background-color: white;
-}
-.input-group{
-    width: 400px;
-}
-.right i{
-    font-size: 20px;
-}
-.section-1{
-    width: 100vw;
-    margin-top: 100px;
-    /* height: 100vh; */
-    padding: 20px;
-    z-index:0;
-}
-.cont1{
-    width: 100vw;
-    height: 100vh;
-}
-.leftone{
-width: 19vw;
-/* min-height: 100vh; */
-margin-left: 150px;
-margin-right: 30px;
-}
-
-.middleone{
-width: 45%;
-/* margin-left: 30px; */
-/* margin-right: 30px; */
-
-
-}
-.rightone{
-    width: 21vw;
-    margin-right: 150px;
-min-height: 300vh;
-margin-left: 30px;
-}
-.left1{
-
-    width: 100%;
-    height: 290px;
-    background-color: white;
-    border-radius: 8px ;
-    margin: 20px 0;
-    border: 1px solid gray;
-
-}
-.left2{
-
-width: 100%;
-height: 100px;
-background-color: white;
-border-radius: 8px ;
-margin: 20px 0;
-border: 1px solid gray;
-padding: 10px;
-
-}
-.left3{
-
-width: 100%;
-height: 140px;
-background-color: white;
-border-radius: 8px ;
-margin: 20px 0;
-border: 1px solid gray;
-padding: 10px;
-}
-.middle1{
-    width: 100%;
-height: 130px;
-background-color: white;
-border-radius: 8px ;
-margin: 20px 0;
-border: 1px solid gray;
-min-height: 100px;
-
-}
-.middle2{
-    width: 100%;
-height: 645px;
-background-color: white;
-border-radius: 8px ;
-margin: 20px 0;
-border: 1px solid gray;
-
-}
-.middle3{
-    width: 100%;
-height: 860px;
-background-color: white;
-border-radius: 8px ;
-margin: 20px 0;
-border: 1px solid gray;
-
-}
-.right1{
-    width: 100%;
-height: 770px;
-margin: 20px 0;
-background-color: white;
-border-radius: 8px ;
-border: 1px solid gray;    
-}
-.right2{
-    width: 100%;
-    height: 300px;
-    background-color: white;
-    border-radius: 8px ;
-    margin: 20px 0;
-    border: 1px solid gray;
-    position: sticky;
-    top: 100px;
-}
-.name{
-    font-size: 20px;
-    font-weight:600 ;
-    margin-left: 15px; 
-    position: relative;
-    bottom: 30px;
-}
-.abt{
-    margin-left: 15px;
-    position: relative;
-    bottom: 28px;
-    font-size: 12px;
-}
-.snist{
-    /* position: relative; */
-    width: 40px;
-    /* margin-left: 10px; */
-    margin-top: 0;
-    
-}
-.a{
-    font-size: small;
-}
-
-@media(max-width:1100px){
-    .rightone{
-        display:none;
-    }
-    .leftone{
-        width:40vw
-    }
-    .middleone{
-
-        width: 90%;
-    }
-    .input-group{
-    width: 200px;
-    height: 55px;
-    display: none;
-}
-.right i{
-    font-size: 15px;
-}
-
-}
-@media(max-width:700px){
-    .main{
-        flex-direction: column;
-    }
-    .right i {
-        font-size: 14px;
-        margin-top: 12px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-    .rightone{
-        display:none;
-    }
-    .left2, .left3{
-       display: none;
-    }
-    .left1{
-          width: 100vw ;
-          height: fit-content;
-          margin-bottom: 20px;
-          padding: 0;
-          margin: 0px;
-          display: none;
-
-          /* display: none; */
-        }
-    .middleone{
-
-        width: 90vw;
-        /* margin: 350px 0px; */
-    /* margin-left: 0px; */
         
-    }
-    .navbar-nav .nav-link {
-                font-size: 10px;
-                display: none;
-    }
-    
-}
-.back{
-    width: 100%;
-}
-.profile{
-    width: 100px;
-    border-radius: 50%;
-    position: relative;
-    bottom: 35px;
-    left: 20px;
-    border: 3px solid white;
-}
-.btn{
-    width:80%;
-            height:50px;
-            border: none;
-            border: 1px solid gray;
-            border-radius:25px;
-            text-align:left;
-            padding-left:10px;
-}
-.r1{
-    margin: 8px;
-}
-.btn2{
-    width:55%;
-            height:40px;
-            border: none;
-            background: transparent;
-            border: 1px solid blue;
-            border-radius:25px;
-            padding-left:10px;
-} 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+        
+        .navbar.scrolled {
+            padding: 0.5rem 0;
+            background-color: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 1.1rem;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .burger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .burger div {
+            width: 25px;
+            height: 3px;
+            background-color: var(--dark);
+            margin: 5px;
+            transition: var(--transition);
+        }
+        
+        /* Home Section */
+        #home {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 0 5%;
+            background: #1F1C2C;  
+background: -webkit-linear-gradient(to right, #926DAB, #1F1C2C); 
+background: linear-gradient(to right, #928DAB, #1F1C2C); 
 
+            color: white;
+            position: relative;
+        }
+        
+        .home-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 600px;
+            z-index: 1;
+        }
+        
+        .home-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .home-text h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .home-text p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid var(--accent);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: 0.15em;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--accent); }
+        }
+        
+        .social-icons {
+            display: flex;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-5px);
+            background-color: var(--accent);
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* About Section */
+        #about {
+            padding: 7rem 5%;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: var(--secondary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .about-img {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .about-img img {
+            width: 80%;
+            max-width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        .about-img img:hover {
+            transform: scale(1.03);
+        }
+        
+        .personal-info {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .info-item i {
+            width: 30px;
+            font-size: 1.2rem;
+            color: var(--secondary);
+        }
+        
+        .info-item span {
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        
+        /* Skills Section */
+        #skills {
+            padding: 7rem 5%;
+            background-color: #f9f9f9;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .skill-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .skill-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .skill-list {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .skill-item {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .skill-item::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 5px;
+            transition: width 1.5s ease-in-out;
+        }
+        
+        /* Projects Section */
+        #projects {
+            padding: 7rem 5%;
+            background-color: white;
+        }
+        
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .project-card {
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .project-content {
+            padding: 1.5rem;
+        }
+        
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .project-desc {
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+        
+        .project-techs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-tech {
+            background-color: #f0f0f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .project-link:hover {
+            color: var(--primary);
+        }
+        
+        .project-link i {
+            margin-right: 0.5rem;
+        }
+        
+        /* Contact Section */
+        #contact {
+            padding: 7rem 5%;
+            background-color: #f9f9f9;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            justify-content: space-between;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-details {
+            list-style: none;
+        }
+        
+        .contact-details li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-details i {
+            width: 40px;
+            height: 40px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 2px rgba(0, 159, 253, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 5%;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            margin: 1.5rem 0;
+            gap: 1rem;
+        }
+        
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-social a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        /* Animations */
+        .animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                position: absolute;
+                right: 0;
+                top: 70px;
+                background-color: white;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                height: 0;
+                overflow: hidden;
+                transition: var(--transition);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                height: 300px;
+                padding: 1rem 0;
+            }
+            
+            .nav-links li {
+                margin: 1rem 0;
+                opacity: 0;
+                transform: translateX(50px);
+                transition: var(--transition);
+            }
+            
+            .nav-links.active li {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            
+            .burger {
+                display: block;
+            }
+            
+            .burger.active div:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+            
+            .burger.active div:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .burger.active div:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+            
+            .home-text h1 {
+                font-size: 2.5rem;
+            }
+            
+            .home-text p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 <body>
-    <nav class="d-flex justify-content-around align-items-center">
-        <div class="left d-flex justify-content-center align-items-center">
-            <img src="logo.jpg" width="40px" class="mb-3 mx-2" alt="">
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                <input type="text" class="form-control" placeholder="Search " aria-label="Username" aria-describedby="basic-addon1">
-              </div>
-        </div>
-
-        <div class="right d-flex justify-content-center align-items-center gap-4">
-            <div class="d-flex flex-column justify-content-center align-items-center border-bottom border-dark border-2 px-2 ">
-                <i class="fa-solid fa-house"></i><p>Home</p>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">My Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
-           <div  class="d-flex flex-column justify-content-center align-items-center px-2"> 
-            <i class="fa-solid fa-user-group"></i><p>Connections</p>
-        </div>
-            <div  class="d-flex flex-column justify-content-center align-items-center px-2">
-                <i class="fa-solid fa-briefcase"></i><p>Jobs</p>
-            </div>
-            
-            <div  class="d-flex flex-column justify-content-center align-items-center px-2">
-                <i class="fa-solid fa-message"></i><p>Message</p>
-            </div>
-            <div  class="d-flex flex-column justify-content-center align-items-center border-end border-gray border-2 px-2">
-                <i class="fa-solid fa-bell"></i><p>Notifications</p>
-            </div>
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <i class="fa-solid fa-grip-vertical"></i><p>Businness</p>
-            </div>
-            <div class="d-flex flex-column justify-content-center align-items-center">
-                <i class="fa-solid fa-square-check"></i><p class="icm">Try Premium</p>
-              </div>
         </div>
     </nav>
-    
-<!-- section1 -->
- <div class="cont1 section-1 d-flex ">
-    <div class="leftone">
-        <div class="left1">
-            <img src="back.jpeg" class="back" alt="">
-            <img src="image.png" class="profile" alt="">
-            <h1 class="name">Tejaswi Thudi<i class="fa-regular fa-circle-check"></i></h1>
-            <h2 class="abt">(She/Her)<br>Student at Sreenidhi Institute Of Science and Technology </h2>
-            <h3 class="abt">Hyderabad, Telangana</h3>
-            <div class="d-flex abt">
-                <img src="sreenidhi.jpg" class="snist" alt="">
-            <b class="a">Sreenidhi Institute Of Science And Technology</b>
-            </div>
-            
-        </div>
-        <div class="left2">
-            <div class="d-flex justify-content-evenly align-items-start gap-4 mx-2 py-2">
-            <div class="d-flex flex-column align-items-start">
-                <b>
-                <p>Profile Viewers</p>
-                <p>Post Impressions</p>
-            </b>
-        </div>
-            <div class="text-primary d-flex flex-column align-items-end">
-                <p>320</p>
-                <p>360</p>
-            </div>
-            </div>
 
+    <!-- Home Section -->
+    <section id="home">
+        <div class="home-content animate">
+            <img src="face.jpg" alt=" Picture" class="home-img">
+            <div class="home-text">
+                <h1>Hi, I'm <span style="color: var(--accent);">Thudi Tejaswi</span></h1>
+                <p class="typewriter">Web Developer & Designer</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://github.com/thuditejaswi" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/tejaswithudi/" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
         </div>
-        <div class="left3">
-            <div class="lsub3 w-100 bg rounded d-flex justify-content-center align-items-start px-4 gap-2 flex-column">
-                <div class="d-flex gap-3 justify-content-center align-items-center"><i class="fa-solid fa-bookmark"></i><strong>Saved</strong></div>
-                <div class="d-flex gap-2 justify-content-center align-items-center"><i class="fa-solid fa-people-group"></i><strong>Groups</strong></div>
-                <div class="d-flex gap-3 justify-content-center align-items-center"><i class="fa-solid fa-newspaper"></i><strong>NewsLetters</strong></div>
-                <div class="d-flex gap-3 justify-content-center align-items-center"><i class="fa-solid fa-calendar-week"></i><strong>Events</strong></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title animate">About Me</h2>
+        <div class="about-content">
+            <div class="about-text animate">
+                <p>Hello! I'm a passionate web developer with a keen eye for design and a love for creating interactive, responsive websites. With expertise in HTML, CSS, and JavaScript, I specialize in building modern web applications that deliver exceptional user experiences.</p>
                 
-            </div>
-
-        </div>
-    </div>
-    <div class="middleone">
-        <div class="middle1">
-            <div class="d-flex flex-column gap-2">
-                <div class="mtop w-100 rounded bg p-3">
-                    <div class="d-flex justify-content-evenly align-items-center">
-                        <img src="image.png" class=" rounded-circle" height="60px" width="60px" alt="">
-                        <button class="btn">Start a post</button>
-                    </div>
-                    <div class="d-flex justify-content-around align-items-center py-4 mid-icons">
-                        <div class="d-flex justify-content-center align-items-center gap-2">
-                            <p><i class="fa-regular fa-image text-primary"></i></p>
-                            <p>Media</p>
-                        </div>
-                            <div class="d-flex justify-content-center align-items-center gap-2">
-                                <p><i class="fa-regular fa-calendar text-danger"></i></p>
-                                <p>Events</p>
-                        </div>
-                        <div class="d-flex  justify-content-center align-items-center gap-2">
-                           <p> <i class="fa-solid fa-newspaper text-danger"></i></p>
-                            <p>Write article</p>
-                        </div>
-                    </div>   
-
-                    </div>
-                </div>
-        </div>
-        <hr>
-        <div class="middle2 p1 mt-3">
-            <div class=" d-flex p-2 justify-content-between">
-                <div class="gap-2 m-2 d-flex">
-                    <img class="rounded-circle " width="50px" height="50px" src="noimg.png" alt="">
+                <p>I believe in writing clean, efficient code and staying up-to-date with the latest web technologies. Whether it's front-end development, back-end programming, or full-stack solutions, I'm dedicated to delivering high-quality work that exceeds expectations.</p>
                 
-                <div class="d-flex flex-column mb-0 p">
-                    <div class="d-flex ">
-                        <h5>Thudi Manaswi.</h5>
-                        <p class="fs-11px mb-0">.3rd+</p>
-                    </div>
-                    <p class="fs-11px mb-0">SUNY Polytechnic Institute | Graduate Assistant</p>
-                    <p class="fs-11px mb-0">2h.<i class="fa-solid fa-earth-americas"></i></p>
+                <div class="personal-info animate">
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span>Name:</span> Thudi Tejaswi
+                        </li>
+                       
+                        <li class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email:</span> Thuditejaswi@gmail.com
+                        </li>
+                        <li class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Location:</span> Hyderabad, India
+                        </li>
+                        <li class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Education:</span> Sreenidhi Institute of Science and Technology
+                        </li>
+                    </ul>
                 </div>
             </div>
-               <div>
-                <i class="fa-solid fa-ellipsis fs-5 px-2"></i>
-                <i class="fa-solid fa-xmark fs-5 px-1 "></i>
-               </div>
+            
+            <div class="about-img animate">
+                <img src="pink.jpg" alt="About Me Image">
             </div>
-            <div class=" fd-16 px-3">Grateful and excited to start my new role as a Student Assistant in the
-                Department of Multicultural Affairs at SUNY Polytechnic Institute!
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title animate">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card animate">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3 class="skill-title">Frontend Development</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">HTML5 & CSS3
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="95%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">JavaScript
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="90%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">React.js
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="85%"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <img class="" width="100%" src="p1.png" alt="">
-            <div class=" d-flex justify-content-center">
-                <p>Stating a New position</p>
+            
+            <div class="skill-card animate">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="skill-title">Backend Development</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">Node.js
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="80%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">Python
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="75%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">SQL & MongoDB
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="85%"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="d-flex justify-content-between px-3">
-                <p><i class="fa-regular fa-thumbs-up in1"></i>288</p>
-                <p>1 comment . 0 Reposts</p>
+            
+            <div class="skill-card animate">
+                <div class="skill-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3 class="skill-title">Design & Others</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">UI/UX Design
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="80%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">Responsive Design
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="90%"></div>
+                        </div>
+                    </li>
+                    <li class="skill-item">Git & GitHub
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 0%;" data-width="85%"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="m2 d-flex justify-content-evenly ">
-                <p class="m31"> <i class="fa-regular fa-thumbs-up px-1 py-2"></i>Like</p>
-                <p class="m31"> <i class="fa-regular fa-comment-dots p-1 py-2"></i>Comment</p>
-                <p class="m31"> <i class="fa-solid fa-repeat p-1 py-2"></i>Repost</p>
-                <p class="m31"> <i class="fa-solid fa-paper-plane p-1 py-2"></i>send</p>
-            </div>
-          </div>
+
+            <div class="skill-card animate">
+              <div class="skill-icon">
+                <i class="fa-solid fa-chart-simple"></i>
+             
+              </div>
+              <h3 class="skill-title">Data Analysis</h3>
+              <ul class="skill-list">
+                  <li class="skill-item">Microsoft Excel
+                      <div class="progress-bar">
+                          <div class="progress" style="width: 0%;" data-width="80%"></div>
+                      </div>
+                  </li>
+                  <li class="skill-item">Python
+                      <div class="progress-bar">
+                          <div class="progress" style="width: 0%;" data-width="75%"></div>
+                      </div>
+                  </li>
+                  <li class="skill-item">Data visualization
+                      <div class="progress-bar">
+                          <div class="progress" style="width: 0%;" data-width="55%"></div>
+                      </div>
+                  </li>
+              </ul>
+          </div>
 
 
-<div class="middle3 p2 mt-3">
-    <div class=" d-flex p-2 justify-content-between">
-        <div class="gap-2 m-2 d-flex">
-            <img class="rounded-circle " width="50px" height="50px" src="noimg.png" alt="">
-        
-        <div class="d-flex flex-column mb-0 p">
-            <div class="d-flex ">
-                <h5>Arif Alam.</h5>
-                <p class="fs-11px mb-0">Following</p>
-            </div>
-            <p class="fs-11px mb-0">Making Data Science and AI Accessible to All | Educator</p>
-            <p class="fs-11px mb-0">2h.<i class="fa-solid fa-earth-americas"></i></p>
         </div>
-    </div>
-       <div>
-        <p class="text-primary">+Follow</p>
-       </div>
-    </div>
-    <div class=" fd-16 px-3">I spent 6 months learning Machine Learning the wrong way.Here's what i wish i Knew on Day1.
-    </div>
-    <img class="" width="100%" src="p2.jpeg" alt="">
-    <div class="d-flex justify-content-between px-3">
-        <p><i class="fa-regular fa-thumbs-up in1"></i>288</p>
-        <p>5 comments . 2 Reposts</p>
-    </div>
-    <div class="m2 d-flex justify-content-evenly ">
-        <p class="m31"> <i class="fa-regular fa-thumbs-up px-1 py-2"></i>Like</p>
-        <p class="m31"> <i class="fa-regular fa-comment-dots p-1 py-2"></i>Comment</p>
-        <p class="m31"> <i class="fa-solid fa-repeat p-1 py-2"></i>Repost</p>
-        <p class="m31"> <i class="fa-solid fa-paper-plane p-1 py-2"></i>send</p>
-    </div>
-          </div>
+    </section>
 
-<div class="middle2 p3 mt-3">
-    <div class=" d-flex p-2 justify-content-between">
-        <div class="gap-2 m-2 d-flex">
-            <img class="rounded-circle " width="50px" height="50px" src="noimg.png" alt="">
-        
-        <div class="d-flex flex-column mb-0 p">
-            <div class="d-flex ">
-                <h5>Analytics/Data Science/AI Career.</h5>
-                <p class="fs-11px mb-0">.2nd</p>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title animate">My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card animate">
+                <img src="link.png" alt="Project 1" class="project-img">
+                <div class="project-content">
+                    <h3 class="project-title">linkedin Clone</h3>
+                    <p class="project-desc">A fully responsive Linkedin profile page clone.</p>
+                    <div class="project-techs">
+                        <span class="project-tech">HTML</span>
+                        <span class="project-tech">CSS</span>
+                        <span class="project-tech">Bootstarp</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://tejaswi-linkediinclone.netlify.app/  " class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="  https://github.com/thuditejaswi/Linkedinclone" class="project-link">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
             </div>
-            <p class="fs-11px mb-0">Vivek Uprit</p>
-            <p class="fs-11px mb-0">1w.Edited.<i class="fa-solid fa-earth-americas"></i></p>
+            
+            <div class="project-card animate">
+                <img src="nike.png" alt="Project 2" class="project-img">
+                <div class="project-content">
+                    <h3 class="project-title">Nike Website</h3>
+                    <p class="project-desc">A Nike website with smooth animations and responsive design.</p>
+                    <div class="project-techs">
+                        <span class="project-tech">HTML</span>
+                        <span class="project-tech">CSS</span>
+                        <span class="project-tech">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://tejaswi-nikewebsite.netlify.app/" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/thuditejaswi/tejaswi-nikeclone" class="project-link">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-card animate">
+                <img src="netflix.png" alt="Project 3" class="project-img">
+                <div class="project-content">
+                    <h3 class="project-title">Netflix Clone</h3>
+                    <p class="project-desc">Netflix Home page Clone with responsiveness .</p>
+                    <div class="project-techs">
+                        <span class="project-tech">HTML</span>
+                        <span class="project-tech">CSS</span>
+                        <!-- <span class="project-tech">Socket.io</span> -->
+                    </div>
+                    <div class="project-links">
+                        <a href="  https://tejaswi-nclone.netlify.app/  " class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a href=" https://github.com/thuditejaswi/netflixclone   " class="project-link">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-       <div>
-        <p class="text-primary">Join</p>
-       </div>
-    </div>
-    <div class=" fd-16 px-3">The Role of Data Analytics in Manufacturing - Part 1 Data analytics is transforming the manufacturing industry by enhancing
-    </div>
-    <img class="" width="100%" src="p3.jpeg" alt="">
-    <div class="d-flex justify-content-between px-3">
-        <p><i class="fa-regular fa-thumbs-up in1"></i>20</p>
-        <p>1 comment . 0 Reposts</p>
-    </div>
-    <div class="m2 d-flex justify-content-evenly ">
-        <p class="m31"> <i class="fa-regular fa-thumbs-up px-1 py-2"></i>Like</p>
-        <p class="m31"> <i class="fa-regular fa-comment-dots p-1 py-2"></i>Comment</p>
-        <p class="m31"> <i class="fa-solid fa-repeat p-1 py-2"></i>Repost</p>
-        <p class="m31"> <i class="fa-solid fa-paper-plane p-1 py-2"></i>send</p>
-    </div>
-          </div>
-        
-    </div>
-    <div class="rightone">
-        <div class="right1">
-            <div class="rounded bg py-4">
-                <h4 class="px-2">Trending Now</h4>
-                    <h7 class="text-secondary px-3">curated by LinkedIn News</h7>
-                    <div class="r1">
-                        <h6>Infosys rolls out salary hikes</h6>
-                        <p class="text-secondary" style="font-size:13px;">26m ago . 14,152 readers</p>
-                    </div>
-                    <div class="r1">
-                        <h6>EV makers accelerate hiring</h6>
-                        <p class="text-secondary" style="font-size:13px;">5h ago . 1,844 readers</p>
-                    </div>
-                    <div class="r1">
-                        <h6>FMGC stocks take a hit</h6>
-                        <p class="text-secondary" style="font-size:13px;">5h ago . 555 readers</p>
-                    </div>
-                    <div class="r1">
-                        <h6>Smartwatches clock decline in sales</h6>
-                        <p class="text-secondary" style="font-size:13px;">5h ago . 511 readers</p>
-                    </div>
-                    <h6 class="px-3">Show more</h6>
-                    <h6 class="text-secondary px-3">Today's puzzles</h6>
-                    <div class="d-flex flex-column gap-3">
-                        <div class="puzzle d-flex justify-content-between align-items-center  p-1 r1">
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="tango.png" height="35px" alt="">
-                                <div class="d-flex flex-column">
-                                    <div>
-                                        Tango
-                                    </div>
-                                    <div>
-                                       Harmonize the grid
-                                    </div>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-chevron-right"></i>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title animate">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info animate">
+                <p>I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision. Feel free to contact me using the form or through my contact details.</p>
+                <ul class="contact-details">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>Hyderabad, India</p>
                         </div>
-                        <div class="puzzle d-flex justify-content-between align-items-center  p-1 r1">
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="queens.png" height="35px" alt="">
-                                <div class="d-flex flex-column">
-                                    <div>
-                                        Queens
-                                    </div>
-                                    <div>
-                                        Crown each region
-                                    </div>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-chevron-right"></i>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>Thuditejaswi@gmail.com</p>
                         </div>
-                        <div class="puzzle d-flex justify-content-between align-items-center p-1  r1">
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="crosclimb.png" height="32px" alt="">
-                                <div class="d-flex flex-column">
-                                    <div>
-                                        Pinpoint
-                                    </div>
-                                    <div>
-                                        Guess the category
-                                    </div>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                        <div class="puzzle d-flex justify-content-between align-items-center p-1 r1">
-                            <div class="d-flex align-items-center gap-2">
-                                <img src="pinpoint.png" height="35px" alt="">
-                                <div class="d-flex flex-column">
-                                    <div>
-                                        Crossclimb
-                                    </div>
-                                    <div>
-                                        Unlock a trivia ladder
-                                    </div>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </div>
-                    
-                            </div>
- 
-        
-                        </div>
-                    </div>
-    <div class="right2">
-        <div class=" d-flex text-secondary align-items-end justify-content-end">
-            <p>Ad <i class="fa-solid fa-ellipsis texr-dark"></i></p>
-        </div>
-        <div class="d-flex flex-column justify-content-center align-items-center px-3">
-            <p >Linkendin Learing is built into the tools that learns learn everyday</p>
-            <img src="learn.png" width="70px" alt="">
-            <p>Drive learner engagement at your   organisation</p>
-            <button class="text-primary btn2"> Contact sales </button>
-        </div>
-       
-    </div>
+                    </li>
+                   
+                </ul>
+            </div>
             
 
-    </div>
 
 
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+            <div class="contact-form animate">
+                
+                <form id="contactForm" action="https://formspree.io/f/thuditejaswi@gmail.com" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" class="form-control" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                    <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                    <input type="text" name="_gotcha" style="display:none">
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2025 Thudi Tejaswi. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/thuditejaswi" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tejaswithudi/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:Thuditejaswi@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+           
+                
+                <!-- <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="" target="_blank"><i class="fab fa-instagram"></i></a> -->
+            </div>
+            <p>Made with <i class="fas fa-heart" style="color: var(--accent);"></i> by Tejaswi</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const burger = document.querySelector('.burger');
+        const nav = document.querySelector('.nav-links');
+        const navLinks = document.querySelectorAll('.nav-links li');
+        
+        burger.addEventListener('click', () => {
+            // Toggle Nav
+            nav.classList.toggle('active');
+            
+            // Animate Links
+            navLinks.forEach((link, index) => {
+                if (link.style.animation) {
+                    link.style.animation = '';
+                } else {
+                    link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                }
+            });
+            
+            // Burger Animation
+            burger.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+                burger.classList.remove('active');
+                navLinks.forEach(link => {
+                    link.style.animation = '';
+                });
+            });
+        });
+        
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Scroll Animation
+        const animateElements = document.querySelectorAll('.animate');
+        
+        function checkScroll() {
+            const triggerBottom = window.innerHeight / 5 * 4;
+            
+            animateElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerBottom) {
+                    element.classList.add('show');
+                }
+            });
+        }
+        
+        // Initial check
+        checkScroll();
+        
+        window.addEventListener('scroll', checkScroll);
+        
+        // Progress Bars Animation
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress');
+            
+            progressBars.forEach(progress => {
+                const width = progress.getAttribute('data-width');
+                setTimeout(() => {
+                    progress.style.width = width;
+                }, 500);
+            });
+        }
+        
+        // Contact Form
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically send the form data to a server
+                // For demonstration, we'll just show an alert
+                alert('Message sent successfully!');
+                contactForm.reset();
+            });
+        }
+        
+        // Initialize animations when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate first section immediately
+            document.querySelector('#home .animate').classList.add('show');
+            
+            // Initialize progress bars when skills section is visible
+            const skillsSection = document.getElementById('skills');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateProgressBars();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            observer.observe(skillsSection);
+        });
+    </script>
 </body>
 </html>
